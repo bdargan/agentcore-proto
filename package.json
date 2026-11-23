@@ -1,0 +1,40 @@
+{
+  "name": "agentcore-proto",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Minimal AgentCore prototype: per-task autonomy, Gateway 2LO, Cedar policy, optional 3LO",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/autonomy/levels.test.ts",
+    "stage-a": "tsx src/agent/stage-a.ts",
+    "stage-a:downgrade": "tsx src/agent/downgrade-demo.ts",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy",
+    "destroy": "cdk destroy",
+    "identity:2lo": "tsx src/identity/two-lo.ts",
+    "gateway:call": "tsx src/gateway/call.ts",
+    "identity:3lo": "tsx src/identity/three-lo.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-agentcore": "^3.1168.0",
+    "@aws-sdk/client-cognito-identity-provider": "^3.1168.0",
+    "@modelcontextprotocol/client": "^2.4.0",
+    "@strands-agents/sdk": "^1.24.0",
+    "bedrock-agentcore": "^0.4.7",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.164",
+    "@types/node": "^22.20.5",
+    "aws-cdk": "^2.1148.1",
+    "aws-cdk-lib": "^2.276.0",
+    "constructs": "^10.8.1",
+    "esbuild": "^0.25.12",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "check_freshness": "inform",
+  "rerun_stale_load": "ask",
+  "rerun_failed_load": "fix_notify",
+  "rerun_empty_load": "fix_log"
+}

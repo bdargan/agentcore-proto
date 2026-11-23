@@ -1,0 +1,4 @@
+{
+  "app": "npx tsx cdk/bin/app.ts",
+  "context": {}
+}
